@@ -1,0 +1,45 @@
+{
+  "data": [],
+  "metadata": {
+    "total_elements": 0,
+    "visible_total_count": 0,
+    "promoted": [],
+    "search_id": "BCC9DBD8453279DA133624CB48B61BFF",
+    "adverts": {
+      "places": null,
+      "config": {
+        "targeting": {
+          "env": "production",
+          "lang": "uk",
+          "account": "",
+          "segment": [],
+          "user_status": "0",
+          "cat_l0": "ads",
+          "cat_id": "0",
+          "private_business": "all",
+          "offer_seek": "all",
+          "view": "gallery",
+          "currency": "UAH",
+          "search_engine_input": "zzqqxxyy12345nothing",
+          "page": "1",
+          "app_version": ""
+        }
+      }
+    },
+    "search_suggestion": {
+      "type": "no_results_last_resort",
+      "url": "https://www.olx.ua/api/v1/offers?query=zzqqxxyy12345nothing&offset=0&limit=5&strategy=last_resort",
+      "changes": {
+        "strategy": "last_resort"
+      }
+    }
+  },
+  "links": {
+    "self": {
+      "href": "https://www.olx.ua/api/v1/offers?query=zzqqxxyy12345nothing&offset=0&limit=5"
+    },
+    "first": {
+      "href": "https://www.olx.ua/api/v1/offers?query=zzqqxxyy12345nothing&offset=0&limit=5"
+    }
+  }
+}

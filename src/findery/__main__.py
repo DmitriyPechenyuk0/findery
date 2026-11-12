@@ -2,8 +2,10 @@
 
 import asyncio
 import logging
+import sys
 
 from findery import __version__
+from findery.cli import build_parser, run_command
 from findery.config import Settings, load_settings
 from findery.log import setup_logging
 
@@ -18,8 +20,11 @@ async def run(settings: Settings) -> None:
 
 
 def main() -> None:
+    args = build_parser().parse_args()
     settings = load_settings()
     setup_logging(settings.log_level)
+    if args.command:
+        sys.exit(asyncio.run(run_command(args, settings)))
     asyncio.run(run(settings))
 
 

@@ -1,0 +1,67 @@
+{
+  "data": [
+    {
+      "city": {
+        "id": 176,
+        "name": "Львів",
+        "normalized_name": "lvov",
+        "lat": 49.82766,
+        "lon": 24.00867
+      },
+      "municipality": {
+        "name": "Львівський"
+      },
+      "region": {
+        "id": 5,
+        "name": "Львівська область",
+        "normalized_name": "lv"
+      }
+    },
+    {
+      "district": {
+        "id": 127,
+        "name": "Галицький",
+        "lat": 49.83524,
+        "lon": 24.03517
+      },
+      "city": {
+        "id": 176,
+        "name": "Львів",
+        "normalized_name": "lvov",
+        "lat": 49.82766,
+        "lon": 24.00867
+      },
+      "municipality": {
+        "name": "Львівський"
+      },
+      "region": {
+        "id": 5,
+        "name": "Львівська область",
+        "normalized_name": "lv"
+      }
+    },
+    {
+      "district": {
+        "id": 129,
+        "name": "Залізничний",
+        "lat": 49.839,
+        "lon": 23.996
+      },
+      "city": {
+        "id": 176,
+        "name": "Львів",
+        "normalized_name": "lvov",
+        "lat": 49.82766,
+        "lon": 24.00867
+      },
+      "municipality": {
+        "name": "Львівський"
+      },
+      "region": {
+        "id": 5,
+        "name": "Львівська область",
+        "normalized_name": "lv"
+      }
+    }
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "data": {
+    "id": 940638579,
+    "url": "https://www.olx.ua/d/uk/obyavlenie/stalker-2-ps5-gra-ID11EP3Z.html",
+    "title": "Stalker 2 PS5 гра",
+    "last_refresh_time": "2026-11-12T02:47:50+02:00",
+    "created_time": "2026-11-12T02:44:23+02:00",
+    "valid_to_time": "2026-12-12T02:44:24+02:00",
+    "pushup_time": null,
+    "description": "STALKER 2: Heart of Chornobyl — відеогра для PlayStation 5.<br />\nСтан ідеальний.<br />\nПовністю українською.<br />\nВідправлю олх новою поштою.<br />\nАбо при особистій зустрічі.",
+    "promotion": {
+      "highlighted": false,
+      "urgent": false,
+      "top_ad": false,
+      "options": [],
+      "b2c_ad_page": false,
+      "premium_ad_page": false
+    },
+    "params": [
+      {
+        "key": "price",
+        "name": "Ціна за 1 шт.",
+        "type": "price",
+        "value": {
+          "value": 1800,
+          "type": "arranged",
+          "arranged": true,
+          "budget": false,
+          "currency": "UAH",
+          "negotiable": true,
+          "converted_value": null,
+          "previous_value": null,
+          "converted_previous_value": null,
+          "converted_currency": null,
+          "label": "1 800 грн.",
+          "previous_label": null
+        }
+      },
+      {
+        "key": "state",
+        "name": "Стан",
+        "type": "select",
+        "value": {
+          "key": "used",
+          "label": "Вживане"
+        }
+      },
+      {
+        "key": "console_manufacturers",
+        "name": "Тип приставки",
+        "type": "select",
+        "value": {
+          "key": "2272",
+          "label": "Sony PlayStation"
+        }
+      }
+    ],
+    "key_params": [],
+    "business": false,
+    "user": {
+      "id": 1000001,
+      "created": "2020-06-01T17:39:20+03:00",
+      "other_ads_enabled": true,
+      "name": "Продавець",
+      "logo": null,
+      "logo_ad_page": null,
+      "social_network_account_type": null,
+      "photo": null,
+      "banner_mobile": "",
+      "banner_desktop": "",
+      "company_name": "Магазин",
+      "about": "",
+      "b2c_business_page": false,
+      "is_online": false,
+      "last_seen": "2026-11-12T02:44:24+02:00",
+      "seller_type": null,
+      "uuid": "00000000-0000-0000-0000-000000000000"
+    },
+    "status": "active",
+    "contact": {
+      "name": "Продавець",
+      "phone": false,
+      "chat": true,
+      "negotiation": true,
+      "courier": true
+    },
+    "map": {
+      "zoom": 11,
+      "lat": 50.45,
+      "lon": 30.52,
+      "radius": 4,
+      "show_detailed": false
+    },
+    "location": {
+      "city": {
+        "id": 268,
+        "name": "Київ",
+        "normalized_name": "kiev"
+      },
+      "district": {
+        "id": 17,
+        "name": "Солом'янський"
+      },
+      "region": {
+        "id": 25,
+        "name": "Київська область",
+        "normalized_name": "ko"
+      }
+    },
+    "photos": [
+      {
+        "id": 5315998793,
+        "filename": "y4xloh0naa62-UA",
+        "rotation": 0,
+        "width": 567,
+        "height": 1008,
+        "link": "https://ireland.apollo.olxcdn.com:443/v1/files/y4xloh0naa62-UA/image;s={width}x{height}"
+      },
+      {
+        "id": 5315998794,
+        "filename": "dcpxms7g8eu8-UA",
+        "rotation": 0,
+        "width": 567,
+        "height": 1008,
+        "link": "https://ireland.apollo.olxcdn.com:443/v1/files/dcpxms7g8eu8-UA/image;s={width}x{height}"
+      }
+    ],
+    "partner": null,
+    "category": {
+      "id": 102,
+      "type": "electronics"
+    },
+    "delivery": {
+      "rock": {
+        "offer_id": null,
+        "active": false,
+        "mode": null
+      }
+    },
+    "safedeal": {
+      "weight": 1,
+      "weight_grams": 1000,
+      "status": "active",
+      "safedeal_blocked": false,
+      "allowed_quantity": []
+    },
+    "shop": {
+      "subdomain": null
+    },
+    "isGpsrAvailable": false,
+    "offer_type": "offer",
+    "protect_phone": true
+  },
+  "links": {
+    "self": {
+      "href": "https://www.olx.ua/api/v1/offers/940638579"
+    }
+  }
+}

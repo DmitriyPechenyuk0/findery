@@ -5,6 +5,8 @@ from typing import Literal
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+from findery import __version__
+
 LogLevel = Literal["DEBUG", "INFO", "WARNING", "ERROR", "CRITICAL"]
 
 
@@ -20,6 +22,8 @@ class Settings(BaseSettings):
 
     log_level: LogLevel = "INFO"
     data_dir: Path = Path("data")
+    # How the app introduces itself to the platforms it queries.
+    user_agent: str = f"findery/{__version__}"
 
     @property
     def db_path(self) -> Path:

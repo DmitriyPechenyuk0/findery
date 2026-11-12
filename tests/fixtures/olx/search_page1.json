@@ -1,0 +1,884 @@
+{
+  "data": [
+    {
+      "id": 940195445,
+      "url": "https://www.olx.ua/d/uk/obyavlenie/iphone-14-pro-max-128-gb-silver-nano-sim-ID11CXMF.html",
+      "title": "iPhone 14 Pro Max 128 GB Silver Nano Sim",
+      "last_refresh_time": "2026-11-11T13:44:55+02:00",
+      "created_time": "2026-11-07T23:16:38+02:00",
+      "valid_to_time": "2026-12-07T23:16:39+02:00",
+      "pushup_time": "2026-11-11T13:44:55+02:00",
+      "omnibus_pushup_time": "2026-11-11T13:44:55+02:00",
+      "description": "iPhone 14 Pro Max у сріблястому кольорі, 128 GB, стан нового, без подряпин, в ремонті не був, не тонув абсолютно нічого.<br />\n<br />\nХарактеристики:<br />\n• Бренд: Apple<br />\n• Модель: iPhone 14 Pro Max<br />\n• Об'єм пам'яті: 128 GB<br />",
+      "promotion": {
+        "highlighted": true,
+        "urgent": false,
+        "top_ad": true,
+        "options": [
+          "bundle_optimum"
+        ],
+        "b2c_ad_page": false,
+        "premium_ad_page": false
+      },
+      "params": [
+        {
+          "key": "mobile_phone_manufacturer",
+          "name": "Марка телефону",
+          "type": "select",
+          "value": {
+            "key": "2065",
+            "label": "Apple"
+          }
+        },
+        {
+          "key": "state",
+          "name": "Стан",
+          "type": "select",
+          "value": {
+            "key": "used",
+            "label": "Вживане"
+          }
+        },
+        {
+          "key": "condition_grade",
+          "name": "Категорія стану та пошкодження",
+          "type": "select",
+          "value": {
+            "key": "like_new",
+            "label": "Без слідів використання"
+          }
+        },
+        {
+          "key": "price",
+          "name": "Ціна за 1 шт.",
+          "type": "price",
+          "value": {
+            "value": 21449,
+            "type": "price",
+            "arranged": false,
+            "budget": false,
+            "currency": "UAH",
+            "negotiable": false,
+            "converted_value": null,
+            "previous_value": 22469,
+            "converted_previous_value": null,
+            "converted_currency": null,
+            "label": "21 449 грн.",
+            "previous_label": "22 469 грн."
+          }
+        },
+        {
+          "key": "storage",
+          "name": "Об'єм вбудованої пам'яті",
+          "type": "select",
+          "value": {
+            "key": "128gb",
+            "label": "128 ГБ"
+          }
+        },
+        {
+          "key": "ram",
+          "name": "Об'єм оперативної пам'яті",
+          "type": "select",
+          "value": {
+            "key": "6gb",
+            "label": "6 ГБ"
+          }
+        },
+        {
+          "key": "battery_health",
+          "name": "Стан акумулятора, %",
+          "type": "select",
+          "value": {
+            "key": "85_89",
+            "label": "85–89%"
+          }
+        },
+        {
+          "key": "mobile_phone_diagonal",
+          "name": "Діагональ екрану",
+          "type": "select",
+          "value": {
+            "key": "6",
+            "label": "Більше 6\""
+          }
+        },
+        {
+          "key": "operating_system",
+          "name": "Операційна система",
+          "type": "select",
+          "value": {
+            "key": "2",
+            "label": "iOS"
+          }
+        },
+        {
+          "key": "serviced",
+          "name": "Історія ремонту",
+          "type": "select",
+          "value": {
+            "key": "never",
+            "label": "Не був у ремонті"
+          }
+        },
+        {
+          "key": "warranty",
+          "name": "Гарантія",
+          "type": "select",
+          "value": {
+            "key": "none",
+            "label": "Без гарантії"
+          }
+        },
+        {
+          "key": "bundle",
+          "name": "Комплектація",
+          "type": "checkboxes",
+          "value": {
+            "key": [
+              "box",
+              "cable",
+              "case"
+            ],
+            "label": "Коробка, Зарядний кабель, Чохол"
+          }
+        }
+      ],
+      "key_params": [],
+      "business": false,
+      "user": {
+        "id": 1000001,
+        "created": "2019-09-10T08:23:32+03:00",
+        "other_ads_enabled": true,
+        "name": "Продавець",
+        "logo": null,
+        "logo_ad_page": null,
+        "social_network_account_type": "facebook",
+        "photo": null,
+        "banner_mobile": "",
+        "banner_desktop": "",
+        "company_name": "Магазин",
+        "about": "",
+        "b2c_business_page": false,
+        "is_online": false,
+        "last_seen": "2026-11-11T23:42:59+02:00",
+        "seller_type": null,
+        "uuid": "00000000-0000-0000-0000-000000000000"
+      },
+      "status": "active",
+      "contact": {
+        "name": "Продавець",
+        "phone": false,
+        "chat": true,
+        "negotiation": false,
+        "courier": true
+      },
+      "map": {
+        "zoom": 12,
+        "lat": 50.45,
+        "lon": 30.52,
+        "radius": 2,
+        "show_detailed": false
+      },
+      "location": {
+        "city": {
+          "id": 176,
+          "name": "Львів",
+          "normalized_name": "lvov"
+        },
+        "district": {
+          "id": 133,
+          "name": "Сихівський"
+        },
+        "region": {
+          "id": 5,
+          "name": "Львівська область",
+          "normalized_name": "lv"
+        }
+      },
+      "photos": [
+        {
+          "id": 5315860642,
+          "filename": "znuagupcwnlh3-UA",
+          "rotation": 0,
+          "width": 750,
+          "height": 1000,
+          "link": "https://ireland.apollo.olxcdn.com:443/v1/files/znuagupcwnlh3-UA/image;s={width}x{height}"
+        },
+        {
+          "id": 5315860643,
+          "filename": "7p8w436y9f9x1-UA",
+          "rotation": 0,
+          "width": 750,
+          "height": 1000,
+          "link": "https://ireland.apollo.olxcdn.com:443/v1/files/7p8w436y9f9x1-UA/image;s={width}x{height}"
+        }
+      ],
+      "partner": null,
+      "category": {
+        "id": 85,
+        "type": "electronics"
+      },
+      "delivery": {
+        "rock": {
+          "offer_id": null,
+          "active": false,
+          "mode": null
+        }
+      },
+      "safedeal": {
+        "weight": 1,
+        "weight_grams": 1000,
+        "status": "active",
+        "safedeal_blocked": false,
+        "allowed_quantity": []
+      },
+      "shop": {
+        "subdomain": null
+      },
+      "isGpsrAvailable": false,
+      "offer_type": "offer",
+      "protect_phone": true,
+      "promotions_applied": {
+        "bundle_optimum": [
+          "topad7",
+          "pushup_automatic"
+        ]
+      },
+      "ad_activation_source": "limit_default"
+    },
+    {
+      "id": 940628139,
+      "url": "https://www.olx.ua/d/uk/obyavlenie/chohli-na-iphone-17-18-pro-max-ID11EMlB.html",
+      "title": "Чохли на iPhone 17-18 pro max",
+      "last_refresh_time": "2026-11-11T22:18:32+02:00",
+      "created_time": "2026-11-11T22:15:14+02:00",
+      "valid_to_time": "2026-12-11T22:15:15+02:00",
+      "pushup_time": null,
+      "description": "1. Оригінальний чехол, стан ідеал - 500 грн<br />\n2. Оригінальний чехол, стан відмінний - 300 грн<br />\n3. Прозорий чехол, новий, одягнений 1 раз - 100 грн<br />\n4. Сірий чохол, стан відмінний - 150 грн<br />\n5. Карбоновий пластик - 250 грн",
+      "promotion": {
+        "highlighted": false,
+        "urgent": false,
+        "top_ad": false,
+        "options": [],
+        "b2c_ad_page": false,
+        "premium_ad_page": false
+      },
+      "params": [
+        {
+          "key": "price",
+          "name": "Ціна за 1 шт.",
+          "type": "price",
+          "value": {
+            "value": 300,
+            "type": "price",
+            "arranged": false,
+            "budget": false,
+            "currency": "UAH",
+            "negotiable": false,
+            "converted_value": null,
+            "previous_value": 930,
+            "converted_previous_value": null,
+            "converted_currency": null,
+            "label": "300 грн.",
+            "previous_label": "930 грн."
+          }
+        },
+        {
+          "key": "state",
+          "name": "Стан",
+          "type": "select",
+          "value": {
+            "key": "new",
+            "label": "Нове"
+          }
+        }
+      ],
+      "key_params": [],
+      "business": false,
+      "user": {
+        "id": 1000001,
+        "created": "2026-04-15T19:14:38+03:00",
+        "other_ads_enabled": true,
+        "name": "Продавець",
+        "logo": null,
+        "logo_ad_page": null,
+        "social_network_account_type": null,
+        "photo": null,
+        "banner_mobile": "",
+        "banner_desktop": "",
+        "company_name": "Магазин",
+        "about": "",
+        "b2c_business_page": false,
+        "is_online": false,
+        "last_seen": "2026-11-11T23:45:53+02:00",
+        "seller_type": null,
+        "uuid": "00000000-0000-0000-0000-000000000000"
+      },
+      "status": "active",
+      "contact": {
+        "name": "Продавець",
+        "phone": false,
+        "chat": true,
+        "negotiation": false,
+        "courier": true
+      },
+      "map": {
+        "zoom": 12,
+        "lat": 50.45,
+        "lon": 30.52,
+        "radius": 5,
+        "show_detailed": false
+      },
+      "location": {
+        "city": {
+          "id": 72,
+          "name": "Луцьк",
+          "normalized_name": "lutsk"
+        },
+        "region": {
+          "id": 22,
+          "name": "Волинська область",
+          "normalized_name": "vol"
+        }
+      },
+      "photos": [
+        {
+          "id": 5315867143,
+          "filename": "i1s2hnbi7l4u2-UA",
+          "rotation": 0,
+          "width": 750,
+          "height": 1000,
+          "link": "https://ireland.apollo.olxcdn.com:443/v1/files/i1s2hnbi7l4u2-UA/image;s={width}x{height}"
+        },
+        {
+          "id": 5315867144,
+          "filename": "bgvhcr71h7ut1-UA",
+          "rotation": 0,
+          "width": 750,
+          "height": 1000,
+          "link": "https://ireland.apollo.olxcdn.com:443/v1/files/bgvhcr71h7ut1-UA/image;s={width}x{height}"
+        }
+      ],
+      "partner": null,
+      "category": {
+        "id": 3276,
+        "type": "electronics"
+      },
+      "delivery": {
+        "rock": {
+          "offer_id": null,
+          "active": false,
+          "mode": null
+        }
+      },
+      "safedeal": {
+        "weight": 1,
+        "weight_grams": 500,
+        "status": "active",
+        "safedeal_blocked": false,
+        "allowed_quantity": []
+      },
+      "shop": {
+        "subdomain": null
+      },
+      "isGpsrAvailable": false,
+      "offer_type": "offer",
+      "protect_phone": true,
+      "promotions_applied": [],
+      "ad_activation_source": "limit_default"
+    },
+    {
+      "id": 940599366,
+      "url": "https://www.olx.ua/d/uk/obyavlenie/otdam-chehly-na-iphone-11-pro-i-iphone-12-besplatno-ID11EERv.html",
+      "title": "отдам чехлы на iPhone 11 Pro и iPhone 12 бесплатно",
+      "last_refresh_time": "2026-11-11T17:42:26+02:00",
+      "created_time": "2026-11-11T17:39:10+02:00",
+      "valid_to_time": "2026-12-11T17:39:10+02:00",
+      "pushup_time": null,
+      "description": "Есть чехлы разных цветов и дизайнов <br />\nОтдам совершенно бесплатно, оплата только за доставку.<br />\nКому нужны — пишите в личные сообщения",
+      "promotion": {
+        "highlighted": false,
+        "urgent": false,
+        "top_ad": false,
+        "options": [],
+        "b2c_ad_page": false,
+        "premium_ad_page": false
+      },
+      "params": [
+        {
+          "key": "price",
+          "name": "Ціна за 1 шт.",
+          "type": "price",
+          "value": {
+            "value": 0,
+            "type": "free",
+            "arranged": false,
+            "budget": false,
+            "currency": "UAH",
+            "negotiable": false,
+            "converted_value": null,
+            "previous_value": null,
+            "converted_previous_value": null,
+            "converted_currency": null,
+            "label": "Безкоштовно",
+            "previous_label": null
+          }
+        },
+        {
+          "key": "state",
+          "name": "Стан",
+          "type": "select",
+          "value": {
+            "key": "used",
+            "label": "Вживане"
+          }
+        }
+      ],
+      "key_params": [],
+      "business": false,
+      "user": {
+        "id": 1000001,
+        "created": "2026-06-21T17:49:06+03:00",
+        "other_ads_enabled": true,
+        "name": "Продавець",
+        "logo": null,
+        "logo_ad_page": null,
+        "social_network_account_type": null,
+        "photo": null,
+        "banner_mobile": "",
+        "banner_desktop": "",
+        "company_name": "Магазин",
+        "about": "",
+        "b2c_business_page": false,
+        "is_online": false,
+        "last_seen": "2026-11-11T17:39:10+02:00",
+        "seller_type": null,
+        "uuid": "00000000-0000-0000-0000-000000000000"
+      },
+      "status": "active",
+      "contact": {
+        "name": "Продавець",
+        "phone": false,
+        "chat": true,
+        "negotiation": false,
+        "courier": false
+      },
+      "map": {
+        "zoom": 12,
+        "lat": 50.45,
+        "lon": 30.52,
+        "radius": 1,
+        "show_detailed": false
+      },
+      "location": {
+        "city": {
+          "id": 11735,
+          "name": "Карнаухівка",
+          "normalized_name": "karnauhovka"
+        },
+        "region": {
+          "id": 21,
+          "name": "Дніпропетровська область",
+          "normalized_name": "dnp"
+        }
+      },
+      "photos": [
+        {
+          "id": 5314981933,
+          "filename": "gjzj6rsn6qpa-UA",
+          "rotation": 0,
+          "width": 960,
+          "height": 1280,
+          "link": "https://ireland.apollo.olxcdn.com:443/v1/files/gjzj6rsn6qpa-UA/image;s={width}x{height}"
+        },
+        {
+          "id": 5314981934,
+          "filename": "sj36zw5ogrks1-UA",
+          "rotation": 0,
+          "width": 960,
+          "height": 1280,
+          "link": "https://ireland.apollo.olxcdn.com:443/v1/files/sj36zw5ogrks1-UA/image;s={width}x{height}"
+        }
+      ],
+      "partner": null,
+      "category": {
+        "id": 3276,
+        "type": "electronics"
+      },
+      "delivery": {
+        "rock": {
+          "offer_id": null,
+          "active": false,
+          "mode": null
+        }
+      },
+      "safedeal": {
+        "weight": 1,
+        "weight_grams": 500,
+        "status": "unactive",
+        "safedeal_blocked": false,
+        "allowed_quantity": []
+      },
+      "shop": {
+        "subdomain": null
+      },
+      "isGpsrAvailable": false,
+      "offer_type": "offer",
+      "protect_phone": true,
+      "promotions_applied": [],
+      "ad_activation_source": "limit_default"
+    },
+    {
+      "id": 593244585,
+      "url": "https://www.olx.ua/d/uk/obyavlenie/remont-telefonv-smartfonv-ayfonv-androd-iphone-IDE9c13.html",
+      "title": "РЕМОНТ телефонів, смартфонів, айфонів, андроїд, iphone",
+      "last_refresh_time": "2026-11-11T13:20:32+02:00",
+      "created_time": "2019-05-03T19:09:48+03:00",
+      "valid_to_time": "2026-12-02T13:20:28+02:00",
+      "pushup_time": "2026-11-11T13:20:32+02:00",
+      "omnibus_pushup_time": "2026-11-11T13:20:32+02:00",
+      "description": "Ремонт iPhone, Samsung, Xiaomi і т.п. по адекватнфй ціні. <br />\n<br />\nПроводимо ремонт модульно та окремих елементів.<br />\n<br />\nЗаміна дисплеїв, корпусів, кришок, акумуляторів, шлейфів, роз*ємів, динаміків, скла, мікросхем і т.д.<br />",
+      "promotion": {
+        "highlighted": true,
+        "urgent": false,
+        "top_ad": true,
+        "options": [
+          "bundle_premium"
+        ],
+        "b2c_ad_page": false,
+        "premium_ad_page": false
+      },
+      "params": [],
+      "key_params": [],
+      "business": true,
+      "user": {
+        "id": 1000001,
+        "created": "2019-05-03T16:19:29+03:00",
+        "other_ads_enabled": true,
+        "name": "Продавець",
+        "logo": null,
+        "logo_ad_page": null,
+        "social_network_account_type": null,
+        "photo": null,
+        "banner_mobile": "",
+        "banner_desktop": "",
+        "company_name": "Магазин",
+        "about": "",
+        "b2c_business_page": false,
+        "is_online": false,
+        "last_seen": "2026-11-09T10:13:52+02:00",
+        "seller_type": null,
+        "uuid": "00000000-0000-0000-0000-000000000000"
+      },
+      "status": "active",
+      "contact": {
+        "name": "Продавець",
+        "phone": true,
+        "chat": true,
+        "negotiation": false,
+        "courier": false
+      },
+      "map": {
+        "zoom": 12,
+        "lat": 50.45,
+        "lon": 30.52,
+        "radius": 7,
+        "show_detailed": false
+      },
+      "location": {
+        "city": {
+          "id": 145,
+          "name": "Черкаси",
+          "normalized_name": "cherkassy"
+        },
+        "region": {
+          "id": 12,
+          "name": "Черкаська область",
+          "normalized_name": "chk"
+        }
+      },
+      "photos": [
+        {
+          "id": 1428725217,
+          "filename": "0ewpc823dze23-UA",
+          "rotation": 0,
+          "width": 4624,
+          "height": 3472,
+          "link": "https://ireland.apollo.olxcdn.com:443/v1/files/0ewpc823dze23-UA/image;s={width}x{height}"
+        }
+      ],
+      "partner": null,
+      "category": {
+        "id": 87,
+        "type": "services"
+      },
+      "delivery": {
+        "rock": {
+          "offer_id": null,
+          "active": false,
+          "mode": null
+        }
+      },
+      "safedeal": {
+        "weight": 0,
+        "weight_grams": 0,
+        "status": "unactive",
+        "safedeal_blocked": false,
+        "allowed_quantity": []
+      },
+      "shop": {
+        "subdomain": null
+      },
+      "isGpsrAvailable": false,
+      "offer_type": "offer",
+      "protect_phone": false,
+      "promotions_applied": {
+        "bundle_premium": [
+          "topad30",
+          "pushup_automatic"
+        ]
+      },
+      "ad_activation_source": "ads_package"
+    },
+    {
+      "id": 940611327,
+      "url": "https://www.olx.ua/d/uk/obyavlenie/64-gb-iphone-x-pak-ID11EHYr.html",
+      "title": "64 gb iphone X пак",
+      "last_refresh_time": "2026-11-11T19:36:35+02:00",
+      "created_time": "2026-11-11T19:33:12+02:00",
+      "valid_to_time": "2026-12-11T19:33:13+02:00",
+      "pushup_time": null,
+      "description": "Пакування iPhone X  на 64гб. Комплект на фото. Норм стан. Ціна 130грн. Пересилаю через олх.",
+      "promotion": {
+        "highlighted": false,
+        "urgent": false,
+        "top_ad": false,
+        "options": [],
+        "b2c_ad_page": false,
+        "premium_ad_page": false
+      },
+      "params": [
+        {
+          "key": "mobile_phone_manufacturer",
+          "name": "Марка телефону",
+          "type": "select",
+          "value": {
+            "key": "2065",
+            "label": "Apple"
+          }
+        },
+        {
+          "key": "state",
+          "name": "Стан",
+          "type": "select",
+          "value": {
+            "key": "used",
+            "label": "Вживане"
+          }
+        },
+        {
+          "key": "price",
+          "name": "Ціна за 1 шт.",
+          "type": "price",
+          "value": {
+            "value": 130,
+            "type": "price",
+            "arranged": false,
+            "budget": false,
+            "currency": "UAH",
+            "negotiable": false,
+            "converted_value": null,
+            "previous_value": null,
+            "converted_previous_value": null,
+            "converted_currency": null,
+            "label": "130 грн.",
+            "previous_label": null
+          }
+        },
+        {
+          "key": "ram",
+          "name": "Об'єм оперативної пам'яті",
+          "type": "select",
+          "value": {
+            "key": "32gb_and_above",
+            "label": "32 ГБ і більше"
+          }
+        },
+        {
+          "key": "mobile_phone_diagonal",
+          "name": "Діагональ екрану",
+          "type": "select",
+          "value": {
+            "key": "5",
+            "label": "5.55\"-6\""
+          }
+        },
+        {
+          "key": "operating_system",
+          "name": "Операційна система",
+          "type": "select",
+          "value": {
+            "key": "2",
+            "label": "iOS"
+          }
+        },
+        {
+          "key": "bundle",
+          "name": "Комплектація",
+          "type": "checkboxes",
+          "value": {
+            "key": [
+              "box"
+            ],
+            "label": "Коробка"
+          }
+        }
+      ],
+      "key_params": [],
+      "business": false,
+      "user": {
+        "id": 1000001,
+        "created": "2024-07-09T23:00:54+03:00",
+        "other_ads_enabled": true,
+        "name": "Продавець",
+        "logo": null,
+        "logo_ad_page": null,
+        "social_network_account_type": null,
+        "photo": null,
+        "banner_mobile": "",
+        "banner_desktop": "",
+        "company_name": "Магазин",
+        "about": "",
+        "b2c_business_page": false,
+        "is_online": false,
+        "last_seen": "2026-11-11T19:33:13+02:00",
+        "seller_type": null,
+        "uuid": "00000000-0000-0000-0000-000000000000"
+      },
+      "status": "active",
+      "contact": {
+        "name": "Продавець",
+        "phone": false,
+        "chat": true,
+        "negotiation": false,
+        "courier": true
+      },
+      "map": {
+        "zoom": 12,
+        "lat": 50.45,
+        "lon": 30.52,
+        "radius": 1,
+        "show_detailed": false
+      },
+      "location": {
+        "city": {
+          "id": 37885,
+          "name": "Винники",
+          "normalized_name": "vinniki_37885"
+        },
+        "region": {
+          "id": 5,
+          "name": "Львівська область",
+          "normalized_name": "lv"
+        }
+      },
+      "photos": [
+        {
+          "id": 5315307212,
+          "filename": "3e25179ny0fv3-UA",
+          "rotation": 0,
+          "width": 752,
+          "height": 1004,
+          "link": "https://ireland.apollo.olxcdn.com:443/v1/files/3e25179ny0fv3-UA/image;s={width}x{height}"
+        },
+        {
+          "id": 5315307213,
+          "filename": "mvslm3td7pbm-UA",
+          "rotation": 0,
+          "width": 752,
+          "height": 1004,
+          "link": "https://ireland.apollo.olxcdn.com:443/v1/files/mvslm3td7pbm-UA/image;s={width}x{height}"
+        }
+      ],
+      "partner": null,
+      "category": {
+        "id": 85,
+        "type": "electronics"
+      },
+      "delivery": {
+        "rock": {
+          "offer_id": null,
+          "active": false,
+          "mode": null
+        }
+      },
+      "safedeal": {
+        "weight": 1,
+        "weight_grams": 1000,
+        "status": "active",
+        "safedeal_blocked": false,
+        "allowed_quantity": []
+      },
+      "shop": {
+        "subdomain": null
+      },
+      "isGpsrAvailable": false,
+      "offer_type": "offer",
+      "protect_phone": true,
+      "promotions_applied": [],
+      "ad_activation_source": "limit_default"
+    }
+  ],
+  "metadata": {
+    "total_elements": 1000,
+    "visible_total_count": 76593,
+    "promoted": [
+      0
+    ],
+    "search_id": "TEST",
+    "adverts": {
+      "places": null,
+      "config": {
+        "targeting": {
+          "env": "production",
+          "lang": "uk",
+          "account": "",
+          "segment": [],
+          "user_status": "0",
+          "cat_l0": "ads",
+          "cat_id": "0",
+          "private_business": "all",
+          "offer_seek": "all",
+          "view": "gallery",
+          "currency": "UAH",
+          "search_engine_input": "iphone",
+          "page": "1",
+          "app_version": ""
+        }
+      }
+    },
+    "source": {
+      "promoted": [
+        0
+      ],
+      "organic": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "links": {
+    "self": {
+      "href": "https://www.olx.ua/api/v1/offers?query=iphone&offset=0&limit=4"
+    },
+    "next": {
+      "href": "https://www.olx.ua/api/v1/offers?query=iphone&offset=4&limit=4"
+    },
+    "first": {
+      "href": "https://www.olx.ua/api/v1/offers?query=iphone&offset=0&limit=4"
+    }
+  }
+}
