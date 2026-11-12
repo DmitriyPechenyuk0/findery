@@ -4,9 +4,12 @@ version = "0.1.0"
 description = "Personal search monitor for classifieds platforms (OLX first) with Telegram alerts"
 requires-python = ">=3.12"
 dependencies = [
+    "aiosqlite>=0.22.1",
+    "alembic>=1.20.1",
     "httpx>=0.28.1",
     "pydantic>=2.9",
     "pydantic-settings>=2.6",
+    "sqlalchemy[asyncio]>=2.1.8",
 ]
 
 [project.scripts]

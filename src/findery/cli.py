@@ -4,6 +4,8 @@ import argparse
 from decimal import Decimal
 
 from findery.config import Settings
+from findery.db.engine import create_engine, create_session_factory
+from findery.db.listings import save_listings
 from findery.models import Listing, Place, SearchQuery
 from findery.sources.olx import OlxClient
 
@@ -22,6 +24,7 @@ def build_parser() -> argparse.ArgumentParser:
     search.add_argument("--private", action="store_true", help="private sellers only")
     search.add_argument("--pages", type=int, default=1, help="pages of 50 to fetch (default 1)")
     search.add_argument("--promoted", action="store_true", help="keep promoted listings")
+    search.add_argument("--save", action="store_true", help="store the listings in the database")
 
     offer = commands.add_parser("offer", help="print one OLX listing by its ID")
     offer.add_argument("id")
@@ -80,6 +83,30 @@ def format_place(place: Place) -> str:
     return f"{name}  [{' '.join(ids)}]"
 
 
+def _stored_price(amount: Decimal | None, currency: str | None) -> str:
+    return "без ціни" if amount is None else f"{_amount(amount)} {currency}"
+
+
+async def save_to_database(listings: list[Listing], settings: Settings) -> str:
+    engine = create_engine(settings.db_path)
+    try:
+        async with create_session_factory(engine).begin() as session:
+            result = await save_listings(session, listings)
+    finally:
+        await engine.dispose()
+    lines = [
+        f"Збережено: нових {len(result.new)}, змінилась ціна або статус "
+        f"{len(result.changed)}, без змін {result.unchanged}"
+    ]
+    for change in result.changed:
+        row = change.row
+        lines.append(
+            f"  {_stored_price(change.old_amount, change.old_currency)} ({change.old_status}) -> "
+            f"{_stored_price(row.price_amount, row.price_currency)} ({row.status}) | {row.title}"
+        )
+    return "\n".join(lines)
+
+
 async def run_command(args: argparse.Namespace, settings: Settings) -> int:
     """Run a subcommand and return the process exit code."""
     async with OlxClient(user_agent=settings.user_agent) as olx:
@@ -96,6 +123,8 @@ async def run_command(args: argparse.Namespace, settings: Settings) -> int:
             listings = await olx.search(query, max_pages=args.pages, include_promoted=args.promoted)
             print("\n\n".join(format_listing(listing) for listing in listings))
             print(f"\nЗнайдено: {len(listings)}")
+            if args.save:
+                print(await save_to_database(listings, settings))
         elif args.command == "offer":
             listing = await olx.get_listing(args.id)
             if listing is None:
