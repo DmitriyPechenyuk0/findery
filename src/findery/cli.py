@@ -6,6 +6,7 @@ from decimal import Decimal
 from findery.config import Settings
 from findery.db.engine import create_engine, create_session_factory
 from findery.db.listings import save_listings
+from findery.formatting import format_amount
 from findery.models import Listing, Place, SearchQuery
 from findery.sources.olx import OlxClient
 
@@ -41,22 +42,17 @@ def build_parser() -> argparse.ArgumentParser:
     return parser
 
 
-def _amount(value: Decimal) -> str:
-    """18500 -> "18 500"."""
-    return f"{value:,.0f}".replace(",", " ")
-
-
 def format_price(listing: Listing) -> str:
     price = listing.price
     if price is None:
         return "без ціни"
     if price.free:
         return "безкоштовно"
-    text = f"{_amount(price.amount)} {price.currency}"
+    text = f"{format_amount(price.amount)} {price.currency}"
     if price.currency != "UAH" and price.amount_uah is not None:
-        text += f" (≈ {_amount(price.amount_uah)} UAH)"
+        text += f" (≈ {format_amount(price.amount_uah)} UAH)"
     if price.previous_amount is not None:
-        text += f", було {_amount(price.previous_amount)}"
+        text += f", було {format_amount(price.previous_amount)}"
     if price.negotiable:
         text += ", торг"
     return text
@@ -90,7 +86,7 @@ def format_place(place: Place) -> str:
 
 
 def _stored_price(amount: Decimal | None, currency: str | None) -> str:
-    return "без ціни" if amount is None else f"{_amount(amount)} {currency}"
+    return "без ціни" if amount is None else f"{format_amount(amount)} {currency}"
 
 
 async def save_to_database(listings: list[Listing], settings: Settings) -> str:

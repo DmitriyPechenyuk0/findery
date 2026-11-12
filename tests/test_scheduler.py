@@ -6,27 +6,13 @@ import pytest
 from sqlalchemy import select
 
 from findery.config import Settings
-from findery.db.engine import create_engine, create_session_factory
 from findery.db.tables import ListingRow, Profile
 from findery.profiles import ProfileConfig, get_or_create_user, sync_profiles
 from findery.scheduler import run_due_profiles, run_forever
 from findery.sources.olx import OlxError
-from support import T0, FakeSource, make_listing
+from support import T0, FakeSource, make_listing, with_database
 
 SETTINGS = Settings(_env_file=None, page_delay=0, tick_seconds=0)
-
-
-def with_database(db_path, scenario):
-    """Run `scenario(sessions)` with a session factory on a fresh engine."""
-
-    async def main():
-        engine = create_engine(db_path)
-        try:
-            return await scenario(create_session_factory(engine))
-        finally:
-            await engine.dispose()
-
-    return asyncio.run(main())
 
 
 async def add_profiles(sessions, *configs: ProfileConfig) -> None:

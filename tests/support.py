@@ -64,3 +64,16 @@ class FakeSource:
             raise self.error
         end = offset + self.page_size
         return FakePage(self.listings[offset:end], has_next=end < len(self.listings))
+
+
+def with_database(db_path, scenario):
+    """Run `scenario(sessions)` with a session factory on a fresh engine."""
+
+    async def main():
+        engine = create_engine(db_path)
+        try:
+            return await scenario(create_session_factory(engine))
+        finally:
+            await engine.dispose()
+
+    return asyncio.run(main())

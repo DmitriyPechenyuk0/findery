@@ -6,7 +6,7 @@ due while the app was down is polled on the next start.
 
 import asyncio
 import logging
-from collections.abc import Callable, Mapping
+from collections.abc import Awaitable, Callable, Mapping
 from datetime import UTC, datetime, timedelta
 
 from sqlalchemy import or_, select
@@ -92,8 +92,17 @@ async def run_forever(
     settings: Settings,
     *,
     clock: Clock = utc_now,
+    after_tick: Callable[[], Awaitable[object]] | None = None,
 ) -> None:
-    """Check for due profiles every `tick_seconds` until the task is cancelled."""
+    """Check for due profiles every `tick_seconds` until the task is cancelled.
+
+    `after_tick` runs after each check; it is where alerts are sent.
+    """
     while True:
         await run_due_profiles(sessions, sources, settings, clock())
+        if after_tick is not None:
+            try:
+                await after_tick()
+            except Exception:
+                logger.exception("the step after the poll failed")
         await asyncio.sleep(settings.tick_seconds)

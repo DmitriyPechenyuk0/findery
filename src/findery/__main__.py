@@ -4,7 +4,11 @@ import asyncio
 import logging
 import sys
 
+from aiogram.exceptions import TelegramUnauthorizedError
+
 from findery import __version__
+from findery.bot.app import COMMANDS, BotConfigError, create_bot, create_dispatcher
+from findery.bot.notifier import send_pending_alerts
 from findery.cli import build_parser, run_command
 from findery.config import Settings, load_settings
 from findery.db.engine import SessionFactory, create_engine, create_session_factory, migrate
@@ -36,13 +40,24 @@ async def load_profiles(settings: Settings, sessions: SessionFactory) -> None:
 
 
 async def run(settings: Settings, *, once: bool = False) -> None:
-    """Application lifecycle: poll the profiles on schedule, or just once.
-
-    The bot is started here in a later step.
-    """
+    """Application lifecycle: poll the profiles and send alerts, on schedule or just once."""
     logger.info("findery %s started, data dir: %s", __version__, settings.data_dir.resolve())
+    bot = create_bot(settings)
+    if bot is None:
+        logger.warning("FINDERY_TELEGRAM_BOT_TOKEN is not set: polling only, no alerts")
     engine = create_engine(settings.db_path)
     sessions = create_session_factory(engine)
+
+    async def send_alerts() -> None:
+        if bot is not None:
+            await send_pending_alerts(
+                sessions,
+                bot,
+                utc_now(),
+                limit=settings.alerts_per_tick,
+                delay=settings.alert_delay,
+            )
+
     try:
         await load_profiles(settings, sessions)
         async with olx.OlxClient(user_agent=settings.user_agent) as olx_client:
@@ -50,9 +65,21 @@ async def run(settings: Settings, *, once: bool = False) -> None:
             if once:
                 polled = await run_due_profiles(sessions, sources, settings, utc_now())
                 logger.info("%d profile(s) polled", polled)
-            else:
-                await run_forever(sessions, sources, settings)
+                await send_alerts()
+                return
+            if bot is not None:
+                # Also the first request to Telegram: a wrong token fails here, at start.
+                await bot.set_my_commands(COMMANDS)
+            async with asyncio.TaskGroup() as tasks:
+                tasks.create_task(run_forever(sessions, sources, settings, after_tick=send_alerts))
+                if bot is not None:
+                    dispatcher = create_dispatcher(settings, sessions)
+                    tasks.create_task(
+                        dispatcher.start_polling(bot, handle_signals=False, close_bot_session=False)
+                    )
     finally:
+        if bot is not None:
+            await bot.session.close()
         await engine.dispose()
 
 
@@ -68,6 +95,12 @@ def main() -> None:
             sys.exit(asyncio.run(run_command(args, settings)))
     except ProfilesFileError as error:
         logger.error("profiles file is invalid: %s", error)
+        sys.exit(2)
+    except BotConfigError as error:
+        logger.error("%s", error)
+        sys.exit(2)
+    except TelegramUnauthorizedError:
+        logger.error("Telegram rejected FINDERY_TELEGRAM_BOT_TOKEN, check it in @BotFather")
         sys.exit(2)
     except KeyboardInterrupt:
         logger.info("stopped")

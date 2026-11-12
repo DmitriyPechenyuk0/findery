@@ -3,6 +3,7 @@
 from pathlib import Path
 from typing import Literal
 
+from pydantic import SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 from findery import __version__
@@ -27,8 +28,14 @@ class Settings(BaseSettings):
 
     # Search profiles are read from this file until they can be created in the bot.
     profiles_file: Path = Path("profiles.toml")
-    # The owner of the profiles from the file; the bot will talk only to this account.
+    # Token from @BotFather. Without it the app only polls and stores, with no alerts.
+    telegram_bot_token: SecretStr | None = None
+    # Your numeric Telegram ID (ask @userinfobot). The bot answers only this account
+    # and sends it the alerts.
     telegram_user_id: int = 0
+    # At most this many alerts are sent after one scheduler tick, this far apart.
+    alerts_per_tick: int = 20
+    alert_delay: float = 1.0
 
     # How often the scheduler looks for profiles whose time has come.
     tick_seconds: float = 60

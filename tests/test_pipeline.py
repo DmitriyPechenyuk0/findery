@@ -207,7 +207,7 @@ def test_two_profiles_share_listings_but_judge_them_separately(db_path):
     assert run(db_path, poll_both) == ({"cheap": REJECTED, "dear": BASELINE}, 1, 1)
 
 
-def test_sync_updates_pauses_and_resumes_profiles(db_path):
+def test_sync_updates_profiles_and_pauses_the_ones_removed_from_the_file(db_path):
     create_profile(db_path)
 
     def sync(configs, now):
@@ -227,5 +227,5 @@ def test_sync_updates_pauses_and_resumes_profiles(db_path):
         "iPhone": (True, None, LATER),
     }
     assert sync([other], LATER)["PS5"][0] is False
-    resumed_at = LATER + timedelta(hours=1)
-    assert sync([changed, other], resumed_at)["PS5"] == (True, 30000, resumed_at)
+    # Back in the file: still paused. Whether a profile runs is decided in the bot.
+    assert sync([changed, other], LATER)["PS5"][0] is False
