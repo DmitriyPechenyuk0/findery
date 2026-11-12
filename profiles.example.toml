@@ -1,0 +1,21 @@
+# Copy to `profiles.toml` and edit. The file is read on every start:
+# profiles are matched by `name`, new ones are created, changed ones updated,
+# and profiles removed from the file are paused (their history stays in the database).
+
+[[profiles]]
+name = "PS5 Львів"
+query = "playstation 5"
+# Hryvnias. Listings outside the range are still stored for market statistics,
+# they just never reach you.
+price_from = 10000
+price_to = 20000
+# IDs come from `uv run findery places львів`.
+city_id = 176
+# region_id = 5
+# category_id = 102
+private_only = true
+# Minutes between polls.
+interval_minutes = 30
+# Listings whose title contains any of these are dropped, on top of the built-in
+# list ("куплю", "обмін", "на запчастини" and the like).
+stop_words = ["vr", "диск", "ігри", "игры"]

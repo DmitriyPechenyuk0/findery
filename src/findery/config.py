@@ -25,6 +25,20 @@ class Settings(BaseSettings):
     # How the app introduces itself to the platforms it queries.
     user_agent: str = f"findery/{__version__}"
 
+    # Search profiles are read from this file until they can be created in the bot.
+    profiles_file: Path = Path("profiles.toml")
+    # The owner of the profiles from the file; the bot will talk only to this account.
+    telegram_user_id: int = 0
+
+    # How often the scheduler looks for profiles whose time has come.
+    tick_seconds: float = 60
+    # A regular poll stops at the first page with nothing new, or after this many pages.
+    poll_max_pages: int = 3
+    # The first poll of a profile collects the market as it is: up to this many pages of 50.
+    initial_max_pages: int = 20
+    # Pause between pages of one poll, in seconds.
+    page_delay: float = 1.0
+
     @property
     def db_path(self) -> Path:
         return self.data_dir / "findery.sqlite3"

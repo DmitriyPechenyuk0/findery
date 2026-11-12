@@ -11,8 +11,14 @@ from findery.sources.olx import OlxClient
 
 
 def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="findery", description="Search monitor for classifieds")
+    parser = argparse.ArgumentParser(
+        prog="findery",
+        description="Search monitor for classifieds",
+        epilog="Without a command: poll the profiles on schedule until stopped.",
+    )
     commands = parser.add_subparsers(dest="command")
+
+    commands.add_parser("once", help="poll the profiles that are due, then exit")
 
     search = commands.add_parser("search", help="search OLX and print the listings")
     search.add_argument("text", help='what to look for, e.g. "playstation 5"')

@@ -10,3 +10,4 @@ dist/
 # Secrets and runtime data
 .env
 data/
+profiles.toml

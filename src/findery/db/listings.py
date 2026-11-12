@@ -27,6 +27,8 @@ class SaveResult:
     new: list[ListingRow] = field(default_factory=list)
     changed: list[PriceChange] = field(default_factory=list)
     unchanged: int = 0
+    # Every stored row touched by the call, each once, in the order first met.
+    rows: list[ListingRow] = field(default_factory=list)
 
 
 def _money(value: Decimal | None) -> Decimal | None:
@@ -141,4 +143,5 @@ async def save_listings(
         snapshot.listing_id = row.id
         session.add(snapshot)
     await session.flush()
+    result.rows = list(rows.values())
     return result

@@ -269,6 +269,8 @@ def _search_params(query: SearchQuery, offset: int, limit: int) -> dict[str, str
 class OlxClient:
     """Use as `async with OlxClient() as olx:` so the connection pool is closed."""
 
+    page_size = MAX_PAGE_SIZE
+
     def __init__(
         self,
         *,
