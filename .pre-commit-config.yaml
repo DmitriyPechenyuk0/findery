@@ -1,0 +1,36 @@
+# Enable once after cloning: uv run pre-commit install
+default_install_hook_types: [pre-commit, post-commit]
+
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: ruff check
+        entry: uv run ruff check
+        language: system
+        types: [python]
+        stages: [pre-commit]
+
+      - id: ruff-format
+        name: ruff format --check
+        entry: uv run ruff format --check
+        language: system
+        types: [python]
+        stages: [pre-commit]
+
+      - id: pytest
+        name: pytest (blocks the commit on failure)
+        entry: uv run pytest
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-commit]
+
+      # A post-commit hook cannot undo the commit; a failure here is only a warning.
+      - id: pytest-post-commit
+        name: pytest (committed state)
+        entry: uv run pytest
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [post-commit]
